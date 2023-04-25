@@ -23,8 +23,8 @@ try:
     cv.imshow('frame', frame)
     key = cv.waitKey(10)
 
-    if key == 27:
-      break
+    # ESC 입력 시 종료
+    if key == 27: break
 
     gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY) # grayscale
     blur = cv.GaussianBlur(gray, (15, 15), 0)
